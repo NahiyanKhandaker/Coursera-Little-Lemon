@@ -1,0 +1,249 @@
+/*This page was made by Nahiyan Alim Khandaker*/
+/*btw hope this passes the project cuz i wanna finish da course*/
+
+
+.main-row2-col1,
+.main-row2-col2,
+.main-row2-col3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+  text-align: center;
+}
+
+.main-row2-img {
+  width: 100%;
+  max-width: 180px;
+  display: block;
+  margin: 0 auto 10px auto;
+  padding: 20px;
+}
+
+.main-row2-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #174a6c;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 1rem;
+  transition: color 0.2s;
+  background: transparent;
+}
+.main-row2-link:hover, .main-row2-link:focus {
+  color: #0d2c40;
+}
+.main-row2-link:hover, .main-row2-link:focus {
+  color: var(--blue2);
+
+}
+.opening-times {
+  margin: 16px 0 0 0;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  text-align: left;
+}
+.opening-times li {
+  margin-bottom: 4px;
+}
+
+.main-row1-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.main-row2-text {
+
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+:root {
+  --tan: #b68d40;
+  --blue1: #e3f0fc;
+  --blue2: #b3d8f8;
+  --blue3: #7bb6ed;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #e0e0e0;
+}
+
+.container {
+  display: grid;
+
+  min-height: 50vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  gap: 10px;
+}
+
+
+@media (min-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "main-row1 main-row2-col1 main-row2-col2 main-row2-col3"
+      "footer footer footer";
+  }
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "main-row1 main-row1 main-row1"
+      "main-row2-col1 main-row2-col2 main-row2-col3";
+    gap: 10px;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+
+.header {
+  grid-area: header;
+  padding: 32px 28px;
+  background-color: var(--blue3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  grid-area: nav;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  background: var(--blue1);
+  padding: 0 16px;
+  gap: 24px;
+}
+
+.nav-link {
+  color: var(--blue3);
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 18px;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.nav-link:last-child {
+  margin-right: 0;
+}
+.nav-link:hover, .nav-link:focus {
+  color: var(--blue2);
+  text-decoration: underline;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+
+.header-title {
+  max-height: 64px;
+  width: auto;
+  display: block;
+}
+
+
+.main-content {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 10px;
+  background: transparent;
+}
+.main-row1 {
+  grid-area: main-row1;
+  padding: 25px;
+  background-color: var(--blue2);
+  text-align: center;
+}
+.main-row2-col1 {
+  grid-area: main-row2-col1;
+  padding: 25px;
+  background-color: var(--blue3);
+  text-align: center;
+}
+.main-row2-col2 {
+  grid-area: main-row2-col2;
+  padding: 25px;
+  background-color: var(--blue1);
+  text-align: center;
+}
+.main-row2-col3 {
+  grid-area: main-row2-col3;
+  padding: 25px;
+  background-color: var(--blue2);
+  text-align: center;
+}
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.footer-col1 {
+  padding: 10px 0 10px 18px;
+  background-color: var(--blue1);
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer-logo {
+  height: 120px;
+  width: auto;
+  display: block;
+}
+.footer-col2 {
+  padding: 10px 18px 10px 0;
+  background-color: var(--blue3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1rem;
+}
